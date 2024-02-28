@@ -34,7 +34,7 @@ please send a patch via pull request.
 Via Composer
 
 ``` bash
-$ composer require league/fractal
+$ composer require danek/fractal
 ```
 
 ## Requirements
