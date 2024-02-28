@@ -21,7 +21,8 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
  */
 class IlluminatePaginatorAdapter implements PaginatorInterface
 {
-    protected LengthAwarePaginator $paginator;
+    /** @var LengthAwarePaginator  */
+    protected $paginator;
 
     /**
      * Create a new illuminate pagination adapter.

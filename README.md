@@ -1,4 +1,4 @@
-# Fractal
+# Fractal - Downgraded fork to PHP 7.1+
 
 [![Latest Version](https://img.shields.io/github/release/thephpleague/fractal.svg?style=flat-square)](https://github.com/thephpleague/fractal/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
@@ -41,7 +41,7 @@ $ composer require league/fractal
 
 The following versions of PHP are supported by this version:
 
-&gt;= PHP 7.4
+&gt;= PHP 7.1
 
 ## Documentation
 

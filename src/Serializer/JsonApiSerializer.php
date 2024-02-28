@@ -17,8 +17,10 @@ use League\Fractal\Resource\ResourceInterface;
 
 class JsonApiSerializer extends ArraySerializer
 {
-    protected ?string $baseUrl = null;
-    protected array $rootObjects = [];
+    /** @var string|null  */
+    protected $baseUrl = null;
+    /** @var array  */
+    protected $rootObjects = [];
 
     public function __construct(?string $baseUrl = null)
     {

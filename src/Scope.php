@@ -28,15 +28,20 @@ use League\Fractal\Serializer\Serializer;
  */
 class Scope implements \JsonSerializable
 {
-    protected array $availableIncludes = [];
+    /** @var array */
+    protected $availableIncludes = [];
 
-    protected ?string $scopeIdentifier;
+    /** @var string|null */
+    protected $scopeIdentifier;
 
-    protected Manager $manager;
+    /** @var Manager */
+    protected $manager;
 
-    protected ResourceInterface $resource;
+    /** @var ResourceInterface */
+    protected $resource;
 
-    protected array $parentScopes = [];
+    /** @var array  */
+    protected $parentScopes = [];
 
     public function __construct(Manager $manager, ResourceInterface $resource, ?string $scopeIdentifier = null)
     {

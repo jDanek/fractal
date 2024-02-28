@@ -42,8 +42,9 @@ class Cursor implements CursorInterface
 
     /**
      * Items being held for the current cursor position.
+     * @var int|null
      */
-    protected ?int $count;
+    protected $count;
 
     /**
      * Create a new Cursor instance.

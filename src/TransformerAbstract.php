@@ -27,18 +27,21 @@ abstract class TransformerAbstract
 {
     /**
      * Resources that can be included if requested.
+     * @var array
      */
-    protected array $availableIncludes = [];
+    protected $availableIncludes = [];
 
     /**
      * Include resources without needing it to be requested.
+     * @var array
      */
-    protected array $defaultIncludes = [];
+    protected $defaultIncludes = [];
 
     /**
      * The transformer should know about the current scope, so we can fetch relevant params.
+     * @var Scope|null
      */
-    protected ?Scope $currentScope = null;
+    protected $currentScope = null;
 
     /**
      * Getter for availableIncludes.

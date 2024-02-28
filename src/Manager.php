@@ -26,40 +26,48 @@ class Manager
 {
     /**
      * Array of scope identifiers for resources to include.
+     * @var array
      */
-    protected array $requestedIncludes = [];
+    protected $requestedIncludes = [];
 
     /**
      * Array of scope identifiers for resources to exclude.
+     * @var array
      */
-    protected array $requestedExcludes = [];
+    protected $requestedExcludes = [];
 
     /**
      * Array of requested fieldsets.
+     * @var array
      */
-    protected array $requestedFieldsets = [];
+    protected $requestedFieldsets = [];
 
     /**
      * Array containing modifiers as keys and an array value of params.
+     * @var array
      */
-    protected array $includeParams = [];
+    protected $includeParams = [];
 
     /**
      * The character used to separate modifier parameters.
+     * @var string
      */
-    protected string $paramDelimiter = '|';
+    protected $paramDelimiter = '|';
 
     /**
      * Upper limit to how many levels of included data are allowed.
+     * @var int
      */
-    protected int $recursionLimit = 10;
+    protected $recursionLimit = 10;
 
-    protected ?Serializer $serializer = null;
+    /** @var Serializer|null  */
+    protected $serializer = null;
 
     /**
      * Factory used to create new configured scopes.
+     * @var ScopeFactoryInterface
      */
-    private ScopeFactoryInterface $scopeFactory;
+    private $scopeFactory;
 
     public function __construct(ScopeFactoryInterface $scopeFactory = null)
     {
@@ -83,7 +91,7 @@ class Manager
 
     public function getIncludeParams(string $include): ParamBag
     {
-        $params = isset($this->includeParams[$include]) ? $this->includeParams[$include] : [];
+        $params = $this->includeParams[$include] ?? [];
 
         return new ParamBag($params);
     }

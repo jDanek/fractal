@@ -24,13 +24,15 @@ abstract class ResourceAbstract implements ResourceInterface
 
     /**
      * Array of meta data.
+     * @var array
      */
-    protected array $meta = [];
+    protected $meta = [];
 
     /**
      * The resource key.
+     * @var string|null
      */
-    protected ?string $resourceKey;
+    protected $resourceKey;
 
     /**
      * A callable to process the data attached to this resource.

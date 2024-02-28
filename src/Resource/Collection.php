@@ -30,9 +30,10 @@ class Collection extends ResourceAbstract
      */
     protected $data;
 
-    protected ?PaginatorInterface $paginator = null;
-
-    protected ?CursorInterface $cursor = null;
+    /** @var PaginatorInterface|null  */
+    protected $paginator = null;
+    /** @var CursorInterface|null  */
+    protected $cursor = null;
 
     public function getPaginator(): ?PaginatorInterface
     {

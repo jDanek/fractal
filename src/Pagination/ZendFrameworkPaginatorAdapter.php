@@ -20,7 +20,8 @@ use Zend\Paginator\Paginator;
  */
 class ZendFrameworkPaginatorAdapter implements PaginatorInterface
 {
-    protected Paginator $paginator;
+    /** @var Paginator */
+    protected $paginator;
 
     /**
      * The route generator.

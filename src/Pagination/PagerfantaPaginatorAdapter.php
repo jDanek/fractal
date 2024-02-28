@@ -20,7 +20,8 @@ use Pagerfanta\Pagerfanta;
  */
 class PagerfantaPaginatorAdapter implements PaginatorInterface
 {
-    protected Pagerfanta $paginator;
+    /** @var Pagerfanta  */
+    protected $paginator;
 
     /**
      * The route generator.

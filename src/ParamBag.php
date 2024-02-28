@@ -16,7 +16,8 @@ namespace League\Fractal;
  */
 class ParamBag implements \ArrayAccess, \IteratorAggregate
 {
-    protected array $params = [];
+    /** @var array  */
+    protected $params = [];
 
     /**
      * Create a new parameter bag instance.
@@ -45,7 +46,7 @@ class ParamBag implements \ArrayAccess, \IteratorAggregate
     #[\ReturnTypeWillChange]
     public function __get(string $key)
     {
-        return isset($this->params[$key]) ? $this->params[$key] : null;
+        return $this->params[$key] ?? null;
     }
 
     /**
